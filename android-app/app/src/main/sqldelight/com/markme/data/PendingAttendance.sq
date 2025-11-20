@@ -1,0 +1,105 @@
+CREATE TABLE PendingAttendance (
+    id TEXT NOT NULL PRIMARY KEY, -- This is the idempotency_key
+    student_id TEXT NOT NULL,
+    device_id TEXT NOT NULL,
+    sess TEXT NOT NULL,
+
+    qrNonce TEXT NOT NULL,
+    lat REAL NOT NULL,
+    lon REAL NOT NULL,
+
+    className TEXT NOT NULL DEFAULT 'Unknown Class',
+
+    ts_client TEXT NOT NULL,
+    attendance_blob TEXT NOT NULL, -- The full canonical JSON blob that was signed
+    student_sig TEXT NOT NULL,     -- The base64 signature
+    status TEXT NOT NULL DEFAULT 'PENDING', -- PENDING, SYNCING, SYNCED, FAILED
+    attempts INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL
+);
+
+-- --- NEW TABLES FOR OFFLINE SUPPORT ---
+
+-- Table for Verified History (Synced records + Records fetched from server)
+CREATE TABLE VerifiedAttendance (
+    id TEXT NOT NULL PRIMARY KEY,
+    sessionId TEXT NOT NULL,
+    className TEXT NOT NULL,
+    status TEXT NOT NULL,
+    timestamp TEXT NOT NULL, -- ISO 8601
+    subjectId TEXT -- Optional, useful for filtering by subject offline
+);
+
+-- Table for User Data / Timetable
+CREATE TABLE CachedSubject (
+    id TEXT NOT NULL PRIMARY KEY,
+    code TEXT NOT NULL,
+    name TEXT NOT NULL
+);
+
+-- --- EXISTING QUERIES ---
+
+getPending:
+SELECT * FROM PendingAttendance
+WHERE status = 'PENDING' OR (status = 'FAILED' AND attempts < 5)
+ORDER BY created_at ASC
+LIMIT :limit;
+
+getById:
+SELECT * FROM PendingAttendance WHERE id = ?;
+
+getAllPending:
+SELECT * FROM PendingAttendance
+ORDER BY created_at DESC;
+
+insert:
+INSERT INTO PendingAttendance(
+    id, student_id, device_id, sess,
+    qrNonce, lat, lon,
+    className,
+    ts_client, attendance_blob, student_sig, created_at,
+    status, attempts
+)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'PENDING', 0);
+
+markAsSyncing:
+UPDATE PendingAttendance
+SET status = 'SYNCING', attempts = attempts + 1
+WHERE id IN ?;
+
+markAsFailed:
+UPDATE PendingAttendance
+SET status = 'FAILED'
+WHERE id IN ?;
+
+deleteById:
+DELETE FROM PendingAttendance
+WHERE id = ?;
+
+-- --- NEW QUERIES FOR OFFLINE SUPPORT ---
+
+-- Verified Attendance Queries
+getAllVerified:
+SELECT * FROM VerifiedAttendance
+ORDER BY timestamp DESC;
+
+getVerifiedBySubject:
+SELECT * FROM VerifiedAttendance
+WHERE subjectId = ?
+ORDER BY timestamp DESC;
+
+insertVerified:
+INSERT OR REPLACE INTO VerifiedAttendance(id, sessionId, className, status, timestamp, subjectId)
+VALUES (?, ?, ?, ?, ?, ?);
+
+-- Cached Subject Queries
+getAllSubjects:
+SELECT * FROM CachedSubject
+ORDER BY name ASC;
+
+insertSubject:
+INSERT OR REPLACE INTO CachedSubject(id, code, name)
+VALUES (?, ?, ?);
+
+deleteAllSubjects:
+DELETE FROM CachedSubject;

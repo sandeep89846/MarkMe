@@ -1,0 +1,35 @@
+# --- General ---
+.DS_Store
+Thumbs.db
+.idea/
+*.log
+
+# --- Android App ---
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# --- Android Build Folders (Recursive) ---
+**/build/
+**/app/build/
+
+# --- Node.js Server ---
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# --- Security / Environment Variables ---
+.env
+.env.local
+*.key
+*.keystore
+*.jks

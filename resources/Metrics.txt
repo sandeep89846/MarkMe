@@ -1,0 +1,282 @@
+ea7db19d-cbae-4164-953f-ca3c75669087
+
+qr-nonce: cda9f500-151f-4da1-a6c5-f3f7df04ad18
+
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 50 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 50
+Successful DB Writes: 50
+Failed Requests: 0
+Average Response Time: 167.50 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 100 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 100
+Successful DB Writes: 100
+Failed Requests: 0
+Average Response Time: 290.92 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 150 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 150
+Successful DB Writes: 150
+Failed Requests: 0
+Average Response Time: 325.03 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 200 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 200
+Successful DB Writes: 200
+Failed Requests: 0
+Average Response Time: 418.04 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 250 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 250
+Successful DB Writes: 250
+Failed Requests: 0
+Average Response Time: 479.88 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 300 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 300
+Successful DB Writes: 300
+Failed Requests: 0
+Average Response Time: 617.68 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 350 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 350
+Successful DB Writes: 350
+Failed Requests: 0
+Average Response Time: 687.12 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 350 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 350
+Successful DB Writes: 350
+Failed Requests: 0
+Average Response Time: 701.84 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 450 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 450
+Successful DB Writes: 450
+Failed Requests: 0
+Average Response Time: 939.48 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 500 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 500
+Successful DB Writes: 500
+Failed Requests: 0
+Average Response Time: 999.49 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 550 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 550
+Successful DB Writes: 550
+Failed Requests: 0
+Average Response Time: 1084.84 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 600 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 600
+Successful DB Writes: 600
+Failed Requests: 0
+Average Response Time: 1205.01 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 650 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 650
+Successful DB Writes: 650
+Failed Requests: 0
+Average Response Time: 1289.80 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 700 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 700
+Successful DB Writes: 700
+Failed Requests: 0
+Average Response Time: 1358.88 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 750 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 750
+Successful DB Writes: 750
+Failed Requests: 0
+Average Response Time: 1475.60 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 800 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 800
+Successful DB Writes: 800
+Failed Requests: 0
+Average Response Time: 1620.93 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 850 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 850
+Successful DB Writes: 850
+Failed Requests: 0
+Average Response Time: 1593.78 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 900 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 900
+Successful DB Writes: 900
+Failed Requests: 0
+Average Response Time: 1789.59 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 1000 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 1000
+Successful DB Writes: 1000
+Failed Requests: 0
+Average Response Time: 1881.13 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 2000 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 2000
+Successful DB Writes: 2000
+Failed Requests: 0
+Average Response Time: 3756.68 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 1200 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 1200
+Successful DB Writes: 1200
+Failed Requests: 0
+Average Response Time: 2208.04 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 1800 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 1800
+Successful DB Writes: 1800
+Failed Requests: 0
+Average Response Time: 3483.66 ms
+PS D:\Project_MarkMe\server> node load_test.js
+
+--- STARTING LOAD TEST ---
+Target: http://127.0.0.1:4000/api/attendance/batch
+Simulating: 1500 concurrent students
+...sending requests...
+
+--- RESULTS ---
+Total Requests: 1500
+Successful DB Writes: 1500
+Failed Requests: 0
+Average Response Time: 2923.66 ms
+PS D:\Project_MarkMe\server
+
